@@ -8,6 +8,7 @@ RUN yum -y install elasticsearch
 RUN yum -y clean all
 ADD logging.yml /etc/elasticsearch/logging.yml
 RUN chown elasticsearch:elasticsearch /etc/elasticsearch/logging.yml
+RUN chown elasticsearch:elasticsearch /etc/elasticsearch
 
 USER root
 COPY docker-entrypoint.sh /
