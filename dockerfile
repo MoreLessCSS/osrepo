@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get install -y --no-install-recommends && add-apt-repository -y ppa:webupd8team/java && \
+RUN apt-get install -y  add-apt-repository -y ppa:webupd8team/java && \
     apt-get update && \
     (echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections) && \
     apt-get install --no-install-recommends -y oracle-java8-installer && \
