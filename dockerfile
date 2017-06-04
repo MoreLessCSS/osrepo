@@ -2,10 +2,10 @@ FROM ubuntu:14.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN     apt-get update
-RUN     apt-get install -y openjdk-8-jdk
-RUN     apt-get install -y ant
-RUN     apt-get clean
+RUN add-apt-repository ppa:webupd8team/java -y
+RUN apt-get update
+RUN apt-get install oracle-java8-installer
+
 
 # Fix certificate issues
 RUN apt-get update && \
