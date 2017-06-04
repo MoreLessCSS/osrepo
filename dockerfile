@@ -6,6 +6,7 @@ RUN rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 ADD elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
 RUN yum -y install elasticsearch
 RUN yum -y clean all
+ADD logging.yml /etc/elasticsearch/logging.yml
 
 USER root
 COPY docker-entrypoint.sh /
