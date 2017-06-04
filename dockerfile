@@ -2,10 +2,10 @@ FROM ubuntu:14.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-    apt-get install -y openjdk-8-jdk && \
-    apt-get install -y ant && \
-    apt-get clean;
+RUN     apt-get update
+RUN     apt-get install -y openjdk-8-jdk
+RUN     apt-get install -y ant
+RUN     apt-get clean
 
 # Fix certificate issues
 RUN apt-get update && \
