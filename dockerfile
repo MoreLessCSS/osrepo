@@ -7,7 +7,7 @@ RUN apt-get install -y --no-install-recommends software-properties-common && add
     (echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections) && \
     apt-get install --no-install-recommends -y oracle-java8-installer && \
     rm -rf /var/cache/oracle-jdk8-installer && \
-    echo "networkaddress.cache.ttl=60
+    echo "networkaddress.cache.ttl=60"
 RUN groupadd -g 1000 elasticsearch && useradd elasticsearch -u 1000 -g 1000
 
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4 && \
